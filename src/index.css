@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-size: 10px;
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+}
+body {
+  background: white;
+  overflow: overlay;
+}
+.scrollbar::-webkit-scrollbar {
+  width: 1rem;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  background: #a35709;
+}
+@media only screen and (max-width: 600px) {
+  * {
+    font-size: 6.25px;
+  }
+}
+@layer components {
+  .formBoxOpen {
+    @apply w-screen h-screen fixed top-0 left-0 bg-primaryColor/70 flex justify-center items-center duration-200 ease-in-out;
+  }
+  .formBoxClose {
+    @apply w-screen h-screen fixed top-[50%] left-[50%] bg-primaryColor/70 flex justify-center items-center scale-0 duration-200 ease-in-out;
+  }
+  .backBtn {
+    @apply text-[1.6rem] text-grayColor py-[1rem] px-[2rem] rounded-[5rem] border-solid border-[.1rem] border-grayColor cursor-pointer;
+  }
+  .submitBtn {
+    @apply text-[1.6rem] text-white py-[1rem] px-[2rem] bg-orangeColor rounded-[5rem];
+  }
+}
