@@ -80,7 +80,7 @@ function Header() {
                     </Link>
                     <Link
                       className="text-primaryColor text-[1.5rem] font-bold text-center py-[1rem]"
-                      to="/user/purchase/all"
+                      to="/user/purchase"
                     >
                       Đơn hàng
                     </Link>

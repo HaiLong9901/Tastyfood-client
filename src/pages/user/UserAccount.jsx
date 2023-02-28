@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Outlet, NavLink } from 'react-router-dom'
 import Avatar from '../../components/common/Avatar'
 import Wrapper from '../../components/common/Wrapper'
@@ -6,6 +6,9 @@ import { FaRegUser, FaFileInvoice } from 'react-icons/fa'
 import { useGetUserQuery } from '../../features/apis/apiSlice'
 
 function UserAccount() {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
   const { data: user, isSuccess } = useGetUserQuery()
   return (
     <div className="bg-gray-100 py-[2rem]">

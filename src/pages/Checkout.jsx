@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Navigate, useLocation, useNavigate } from 'react-router-dom'
 import { selectAmountOfOrder, selectProductsFromOrder, removeAllProduct } from '../features/order/orderSlice'
 import { useSelector, useDispatch } from 'react-redux'
@@ -27,6 +27,9 @@ export const CheckoutItem = ({ name, quantity, sale_price, imageURL }) => (
   </div>
 )
 function Checkout() {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
   const location = useLocation()
   const navigate = useNavigate()
   const dispatch = useDispatch()

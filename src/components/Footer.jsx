@@ -17,12 +17,7 @@ function Footer() {
                 </Link>
               </li>
               <li className="py-[1rem]">
-                <Link to="/" className="text-white text-[1.6rem] opacity-60">
-                  Giới thiệu
-                </Link>
-              </li>
-              <li className="py-[1rem]">
-                <Link to="/" className="text-white text-[1.6rem] opacity-60">
+                <Link to="/product" className="text-white text-[1.6rem] opacity-60">
                   Thực đơn
                 </Link>
               </li>

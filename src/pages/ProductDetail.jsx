@@ -5,8 +5,6 @@ import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import Wrapper from '../components/common/Wrapper'
 import { AiOutlineTag } from 'react-icons/ai'
-import ReviewBox from '../components/common/ReviewBox'
-import { USER_DEFAULT_AVATAR } from '../shared/Constants'
 function ProductDetail() {
   const [quantity, setQuantity] = useState(1)
   const params = useParams()
@@ -47,7 +45,11 @@ function ProductDetail() {
   }
   let Detail
   if (isFetchingDetail) {
-    Detail = <div>Loading</div>
+    Detail = (
+      <div className="w-full h-full text-[2.5rem] text-orangeColor italic flex justify-center items-center">
+        Loading...
+      </div>
+    )
   } else if (isSuccessDetail) {
     Detail = (
       <>
@@ -107,7 +109,7 @@ function ProductDetail() {
   }
   return (
     <Wrapper>
-      <div className="my-[5rem]">
+      <div className="my-[5rem] min-h-[70vh] lg:min-h-[60vh]">
         <div className="flex flex-col lg:flex-row w-full justify-between">{Detail}</div>
         <ToastContainer />
       </div>

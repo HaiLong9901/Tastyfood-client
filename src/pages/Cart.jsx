@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import CartProduct from '../components/product/CartProduct'
 import Wrapper from '../components/common/Wrapper'
 import { useGetCartQuery } from '../features/apis/apiSlice'
@@ -9,6 +9,9 @@ import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
 function Cart() {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
   const navigate = useNavigate()
   const amount = useSelector(selectAmountOfOrder)
   const productsOrder = useSelector(selectProductsFromOrder)

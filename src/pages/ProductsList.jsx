@@ -64,7 +64,7 @@ function ProductsList() {
   }
   return (
     <Wrapper>
-      <div className="flex my-[5rem] justify-between flex-col-reverse lg:flex-row gap-[2rem]">
+      <div className="flex my-[5rem] justify-end lg:justify-between flex-col-reverse lg:flex-row gap-[2rem] min-h-[80vh]">
         <div className="flex flex-wrap content-start w-full lg:w-[80%] gap-[3rem] md:gap-[4rem] lg:gap-[2rem]">
           {ProductsList}
         </div>
@@ -127,7 +127,6 @@ function ProductsList() {
         </div>
       </div>
     </Wrapper>
-    // <SuccessBox title="Thanh cong" />
   )
 }
 
